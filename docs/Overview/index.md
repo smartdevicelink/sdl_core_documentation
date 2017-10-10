@@ -16,3 +16,4 @@ For Integration purpose, please follow:
 For Testing purpose, please follow:
 
 - [Logging and diagnostics](../software-architecture-document/operational-view/#logging-configuration)
+- [Automated Test Framework (ATF) SW Architecture](../atf/table-of-contents/)
