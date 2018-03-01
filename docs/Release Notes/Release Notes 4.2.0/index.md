@@ -235,5 +235,3 @@ All known SDL defects reflected in following chapter. The correction and verific
 | [Genivi] Incorrect Version of API in MOBILE_API.xml | Normal |
 | [GENIVI] SDL build without any error message with empty version in MOBILE_API.xml | Minor |
 | [GENIVI] SyncMsgVersion is not updated after RegisterAppInterface | Minor |
-
-
