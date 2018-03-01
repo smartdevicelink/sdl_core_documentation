@@ -92,5 +92,3 @@ Two new evolution proposals were implemented in release 4.3.0:
 ## Fixes
 - Includes fixes for all defects found by the Coverity scan tool that were introduced in this release - [Link](https://github.com/smartdevicelink/sdl_core/issues/1641)
 - Includes fixes for several Coverity defects that were previously implemented in the `coverity` branch - [Link](https://github.com/smartdevicelink/sdl_core/issues/1637)
-
-
