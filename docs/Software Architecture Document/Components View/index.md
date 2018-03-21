@@ -88,10 +88,9 @@ The view is represented by module and subsystem diagrams that show the system's 
     - Mobile application state manipulation 
   - *Relations*
     - Uses ***Commands***
+    - Uses ***RPC Service***
     - Uses ***MediaManager***
-    - Requires ***HMIMessageObserver** and **HMIMessageSender (HMI Message Handler)***
     - Requires ***PolicyHandler** and **PolicyHandlerObserver (Policy)***
-    - Requires ***ProtocolHandler** and **ProtocolObserver (Protocol Handler)***
     - Requires ***ConnectionHandler** and **ConnectionHandlerObserver (Connection Handler)***
     - Requires ***SessionObserver (Connection Handler)***
     - Requires ***SecurityManagerListener (Security Manager*** component***)*** 
@@ -102,6 +101,22 @@ The view is represented by module and subsystem diagrams that show the system's 
   - *Constraints*
     - *N/A* 
 
+#### RPC Service
+  - *Responcibility*
+    - Send Mobile/HMI RPCs
+    - Handle Mobile/HMI RPCs
+  - *Relations*
+    - Uses ***PluginManager***
+    - Uses ***RequestController***
+    - Requires ***ProtocolHandler** and **ProtocolObserver (Protocol Handler)***
+    - Requires ***HMIMessageObserver** and **HMIMessageSender (HMI Message Handler)***
+  - *Interfaces* 
+    - Provides ***RPCService*** interface
+  - *Behavior*
+    - The component implements RPC transfering functionality
+  - *Constraints*
+    - *N/A* 
+
 #### Commands
   - *Responsibility* 
     - Mobile and HMI RPC data verification according to business-requirements
@@ -109,8 +124,9 @@ The view is represented by module and subsystem diagrams that show the system's 
   - *Relations*
     - Created by ***ApplicationManager***
     - Composed by ***RequestController***
+    - Used by ***RequestController***
   - *Interfaces* 
-    - Provides ***Command*** interface 
+    - Provides ***RPCService*** interface 
   - *Behavior* 
     - Mobile Requests are spitted between responsible HMI interfaces and sent as separate HMI Requests or Notifications.
     - HMI Responses and notifications are verified according to business requirements and provided to Mobile.
@@ -163,6 +179,18 @@ The view is represented by module and subsystem diagrams that show the system's 
   - *Constraints*
     - Able to load only RPC layer plugins
 
+#### Plugin
+  - *Responsibility*
+    - Process Mobile/HMI RPC
+  - *Relations*
+    - Composed by ***Plugin Manager*** 
+    - Uses ***Commands***
+  - *Interfaces*
+    - Provides ***Plugin*** interface 
+  - *Behavior*
+    - Handle pecific RPC and process it's internal logic
+  - *Constraints*
+    - Able to implement only RPC layer functionality extension
 
 #### Resumption
   - *Responsibility*
@@ -214,12 +242,12 @@ The view is represented by module and subsystem diagrams that show the system's 
     - Implements specific mobile RPC handling.
     - Implements specific HMI RPC handling.
   - *Relations*
-    - Composed by ***Plugin manager*** 
-    - Handles ***Application Manager*** by ***Service*** interface
+    - Composed by ***Plugin*** 
+    - Handles ***Application Manager*** by ***Application Manager*** interface
   - *Interfaces*
-    - Provides ***Plugin Manager*** interface   
+    - Provides ***Plugin*** interface   
   - *Behavior*
-    - Receives data from CoreService
+    - Receives data from ApplicationManager
     - Parses data
     - Creates commands.
     - Handles incoming HMI notifications
