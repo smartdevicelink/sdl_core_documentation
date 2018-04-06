@@ -1,5 +1,9 @@
 # SDL Core 4.5.0 Release Notes
 
+## Supported Specifications
+- SDL Mobile RPC Spec: [Version 4.5.0](https://github.com/smartdevicelink/rpc_spec/releases/tag/4.5.0)
+- SDL Protocol Spec: [Version 5.0.0](https://github.com/smartdevicelink/protocol_spec/releases/tag/5.0.0)
+
 ## Implemented Proposals
 
 [Connectivity via iAP-BT and Transport Switch](https://github.com/smartdevicelink/sdl_evolution/blob/master/proposals/0053-Connectivity-via-iAP-BT-and-Transport-Switch.md) - Implementation of a mechanism to change a registered app connected over one transport to another seamlessly.
@@ -41,6 +45,10 @@
 - [Bluetooth StartService fail after Core restarted](https://github.com/smartdevicelink/sdl_core/issues/1932)
 - [Silent error caused by implicit conversion of SmartPointer to integer](https://github.com/smartdevicelink/sdl_core/issues/1834)
 - [AOA USB transport buffer size too small](https://github.com/smartdevicelink/sdl_core/issues/1863)
+- [Lock screen icon URL should be updated](https://github.com/smartdevicelink/sdl_core/issues/1646)
+- [Broken link in README.md for Software Architecture Documentation](https://github.com/smartdevicelink/sdl_core/issues/2091)
+- [SDL doesn't send OnPermissionsChange in case of external user consent](https://github.com/smartdevicelink/sdl_core/issues/2072)
+- [Build fails when ENABLE_SECURITY=OFF](https://github.com/smartdevicelink/sdl_core/issues/2073)
 
 ### Security Related Fixes
 - [SDL must start PTU for navi app right after app successfully registration](https://github.com/smartdevicelink/sdl_core/issues/1925)
