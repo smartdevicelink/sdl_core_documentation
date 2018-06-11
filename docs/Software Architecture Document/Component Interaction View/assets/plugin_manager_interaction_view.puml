@@ -11,25 +11,20 @@ participant "Plugin 1" as P1
 participant "Plugin 2" as P2
 
 PH -> AM : Send message
-AM -> PM : Process message
+AM -> PM : Find Plugin to process message
 
 alt Some plugin able to Process Message
+PM -> AM : Plugin1
+AM -> P1 : Process
+P1 -> Commands : Send Message to HMI/Mobile
 
-PM -> P1 : Process
-P1 -> PM : Cannot process
-PM -> P2 : Process
-P2 -> AM : Send Message to HMI/Mobile
-else
+else RPC is not supported by any plugin
 
-PM -> P1 : Process
-P1 -> PM : Cannot process
-PM -> P2 : Process
-P2 -> PM : Cannot process
-PM -> AM : Cannot Process
-AM -> Commands : Process Message
-Commands -> AM : Send Message to HMI/Mobile
+PM -> AM : Unable to process
+AM -> Commands : Send INVALID_DATA to mobile
 
 end
+
 skinparam defaultFontSize 16
 skinparam sequence {
     ArrowColor Blue
