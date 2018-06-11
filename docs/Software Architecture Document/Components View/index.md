@@ -269,6 +269,23 @@ The view is represented by module and subsystem diagrams that show the system's 
   - *Constraints*
     - N/A
 
+#### VehicleInfo Plugin
+  - *Responsibility*
+    - Allows incorporating additional functionality to the core application by application extension.
+    - Implements specific mobile RPC processing.
+    - Implements specific HMI RPC processing.
+  - *Relations*
+    - Composed by ***Plugin***
+    - Handles ***Application Manager*** by ***Application Manager*** interface
+  - *Interfaces*
+    - Provides ***Plugin*** interface
+  - *Behavior*
+    - Receives data from ApplicationManager
+    - Parses data
+    - Creates commands.
+  - *Constraints*
+    - N/A
+
 ### Protocol layer components:
 
 #### Protocol Handler

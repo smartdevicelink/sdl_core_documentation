@@ -74,6 +74,7 @@ Development view organizes SmartDeviceLink components into logical and abstract 
     - Plugin Manager
     - RC RPC Plugin
     - SDL RPC Plugin
+    - VehicleInfo Plugin
     - Policy
    - *Behavior:*
      - Main business logic functionality.
