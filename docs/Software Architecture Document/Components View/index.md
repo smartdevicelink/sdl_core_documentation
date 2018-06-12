@@ -80,7 +80,7 @@ The view is represented by module and subsystem diagrams that show the system's 
     - Processes messages from a single instance of HMI only.
     - HMI-transport need to be statically configurable with build flags.
 
-### Business layer components:
+### Application layer components:
 
 #### Application Manager
   - *Responsibility*
@@ -117,13 +117,14 @@ The view is represented by module and subsystem diagrams that show the system's 
   - *Constraints*
     - *N/A*
 
-#### Commands
+#### RPC plugin
+
   - *Responsibility*
     - Mobile and HMI RPC data verification according to business-requirements
     - Transferring Mobile RPC Requests to HMI subsystems (UI, VR, TTS and other available ones) and HMI to Mobile Responses and Notifications
   - *Relations*
     - Created by ***ApplicationManager***
-    - Composed by ***RequestController***
+    - Composed by **PluginManager***
     - Used by ***RequestController***
   - *Interfaces*
     - Provides ***RPCService*** interface

@@ -39,7 +39,7 @@ The following table is a mapping between the elements in the Data view and the D
 | ***SmartObject***     | X                     |                    |                     |              |
 | ***Mobile Command***  | X                     |                    |                     |              |
 | ***HMI Command***     | X                     |                    |                     |              |
-| ***RPS Service***     | X                     |                    |                     |              |
+| ***RPC Service***     | X                     |                    |                     |              |
 | ***ProtocolFrame***   |                       | X                  |                     |              |
 | ***SecurityQuery***   |                       | X                  |                     |              |
 | ***RawMessage***      |                       | X                  | X                   | X            |
