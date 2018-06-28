@@ -22,6 +22,9 @@ The following table is a mapping between the elements in the Component view and 
 | ***Security Manager***    |                       | X                  |                     |              |
 | ***HMI Message Handler*** |                       |                    | X                   | X            |
 | ***Plugin Manager***      | X                     |                    |                     |              |
+| ***RC RPC Plugin***       | X                     |                    |                     |              |
+| ***SDL RPC Plugin***      | X                     |                    |                     |              |
+| ***VehicleInfo Plugin***  | X                     |                    |                     |              |
 | ***Transport Manager***   |                       |                    | X                   |              |
 | ***Transport Adapter***   |                       |                    | X                   | X            |
 | ***Utils***               |                       |                    |                     | X            |
@@ -37,6 +40,7 @@ The following table is a mapping between the elements in the Data view and the D
 | ***SmartObject***     | X                     |                    |                     |              |
 | ***Mobile Command***  | X                     |                    |                     |              |
 | ***HMI Command***     | X                     |                    |                     |              |
+| ***RPC Service***     | X                     |                    |                     |              |
 | ***ProtocolFrame***   |                       | X                  |                     |              |
 | ***SecurityQuery***   |                       | X                  |                     |              |
 | ***RawMessage***      |                       | X                  | X                   | X            |
