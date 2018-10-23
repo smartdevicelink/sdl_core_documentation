@@ -1,6 +1,6 @@
 # General Description
 
-THe multiple transports feature allows core to use two transports at the same time(for example communication over bluetooth and video streaming over WiFi). This guide will walk you through how to set up multiple transports using the `smartDeviceLink.ini` file.
+The multiple transports feature allows apps connected to core to start another connection over a different transport for certain services(For example, the app connecting over bluetooth and then connecting over WiFi for video streaming). This guide will walk you through how to set up multiple transports using the `smartDeviceLink.ini` file.
 
 ## Implementation
 * After Proxy is connected to Core, it initiates another connection over a different transport.
@@ -44,7 +44,7 @@ Core sends a TransportEventUpdate to the proxy to provide additional information
 ### `RegisterSecondaryTransport`
 
 Using the information in the StartService ACK and TransportEventUpdate frames, the proxy sends a RegisterSecondary transport request over the secondary transport.
-* If core sends back a RegisterSecondaryTransport ACK the proxy starts the service over the secondary transport
+* If core sends back a RegisterSecondaryTransport ACK, the proxy starts the service over the secondary transport
 
 ## Operation Examples
 Start Service(WiFi as secondary transport)  
@@ -82,7 +82,7 @@ Add the following lines to `smartDeviceLink.ini`
 
 ```
 [MultipleTransports]
-; Whether multiple-transports feature is enabled
+...
 MultipleTransportsEnabled = true
 ```
 
@@ -113,9 +113,6 @@ List of secondary transport types
 
 ## Audio and Video streaming
 
-; A matrix to specify which service is allowed on which transports. The transports are listed
-; in preferred order. If a transport is not listed, then the service is not allowed
-; to run on the transport.
 Modify the services map in `smartdeviceLink.ini` to restrict video and audio streaming services to specific transport types.
 
 ```
@@ -126,4 +123,4 @@ VideoServiceTransports = TCP_WIFI, AOA_USB
 ```
 * Transports are listed in preffered order
 * If a transport is not listed, then the service is not allowed to run on that transport
-* If the `AudioServiceTransports`/`VideoServiceTransports` line is omitted, service will be allowed to run on any of the transports
+* If the `AudioServiceTransports`/`VideoServiceTransports` line is omitted, service will be allowed to run on the primary transport
