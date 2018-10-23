@@ -56,38 +56,39 @@ Figure 1
 ![StartService](./assets/StartService.png)
 |||
 
-### Start Video/Audio service(Over secondary transport) 
+### Start Video/Audio service(Over secondary transport)  
+
 |||
 Figure 2
-![StartVideoService_Video](./assets/StartService_Video.png)  
+![StartServiceVideo](./assets/StartService_Video.png)
 |||
 
 ### Start Video/Audio service(No transport available)  
 
 |||
 Figure 3
-![StartServiceNAK_Video](./assets/StartServiceNAK_Video.png)  
+![StartServiceVideo NAK](./assets/StartServiceNAK_Video.png)
 |||
 
 ### Backwards Compatibility(New Proxy/Old Core)  
 
 |||
 Figure 4
-![Compatibility_NP_OC](./assets/Compatibility_NP_OC.png)  
+![Compatibility NewProxy OldCore](./assets/Compatibility_NP_OC.png)
 |||
 
 ### Backwards Compatibility(Old Proxy/New Core)  
 
 |||
 Figure 5
-![Compatibility_OP_NC](./assets/Compatibility_OP_NC.png)  
+![Compatibility OldProxy NewCore](./assets/Compatibility_OP_NC.png)
 |||
 
 ### TransportEventUpdate(Secondary Transport unavailable)  
 
 |||
 Figure 6
-![TransportEventUpdate_Disconnected](./assets/TransportEventUpdate_Disconnected.png)  
+![TransportEventUpdate](./assets/TransportEventUpdate_Disconnected.png)
 |||
 
 # Setting up multiple transports
