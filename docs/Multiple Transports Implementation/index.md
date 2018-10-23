@@ -24,7 +24,8 @@ Three protocol control frames are used to implement multiple transports
 }
 ```
 
-Core responds to the proxy's `StartService` request with additional parameters audioServiceTransports, videoServiceTransports and secondaryTransports. 
+Core responds to the proxy's `StartService` request with additional parameters audioServiceTransports, videoServiceTransports and secondaryTransports.   
+
 - The secondaryTransports contains an array of the allowed secondary transports for the current primary transport. 
 - AudioServiceTransports and videoServiceTransports describe which service is allowed to run on which transports (Primary, Secondary or both). The Proxy uses this information and starts services only on an allowed transport.
 - Since RPC and Hybrid services always run on Primary Transport, only Video and Audio services are configurable.
@@ -37,7 +38,8 @@ Core responds to the proxy's `StartService` request with additional parameters a
 }
 ```
 
-Core sends a TransportEventUpdate to the proxy to provide additional information required to connect to the secondary transport
+Core sends a TransportEventUpdate to the proxy to provide additional information required to connect to the secondary transport  
+
 - In the case of TCP as the secondary transport, the TransportEventUpdate contains the `tcpIpAddress` and `tcpPort` params.
 - If the `tcpIpAddress` field is empty, the secondary transport is unavailable and proxy will not send a RegisterSecondaryTransport request 
 
@@ -47,30 +49,46 @@ Using the information in the StartService ACK and TransportEventUpdate frames, t
 - If core sends back a RegisterSecondaryTransport ACK, the proxy starts the service over the secondary transport
 
 ## Operation Examples
-Start Service(WiFi as secondary transport)  
+### Start Service(WiFi as secondary transport)  
 
-![Figure 1](./assets/StartService.png)
+|||
+Figure 1
+![StartService](./assets/StartService.png)
+|||
 
-Start Video/Audio service(Over secondary transport) 
+### Start Video/Audio service(Over secondary transport) 
+|||
+Figure 2
+![StartVideoService_Video](./assets/StartService_Video.png)  
+|||
 
-![Figure 2](./assets/StartService_Video.png)  
+### Start Video/Audio service(No transport available)  
 
-Start Video/Audio service(No transport available)  
+|||
+Figure 3
+![StartServiceNAK_Video](./assets/StartServiceNAK_Video.png)  
+|||
 
-![Figure 3](./assets/StartServiceNAK_Video.png)  
+### Backwards Compatibility(New Proxy/Old Core)  
 
-Backwards Compatibility(New Proxy/Old Core)  
+|||
+Figure 4
+![Compatibility_NP_OC](./assets/Compatibility_NP_OC.png)  
+|||
 
-![Figure 4](./assets/Compatibility_NP_OC.png)  
+### Backwards Compatibility(Old Proxy/New Core)  
 
-Backwards Compatibility(Old Proxy/New Core)  
+|||
+Figure 5
+![Compatibility_OP_NC](./assets/Compatibility_OP_NC.png)  
+|||
 
-![Figure 5](./assets/Compatibility_OP_NC.png)  
+### TransportEventUpdate(Secondary Transport unavailable)  
 
-TransportEventUpdate(Secondary Transport unavailable)  
-
-![Figure 6](./assets/TransportEventUpdate_Disconnected.png)  
-
+|||
+Figure 6
+![TransportEventUpdate_Disconnected](./assets/TransportEventUpdate_Disconnected.png)  
+|||
 
 # Setting up multiple transports
 
