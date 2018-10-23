@@ -1,6 +1,6 @@
 # General Description
 
-The multiple transports feature allows apps connected to core to start another connection over a different transport for certain services(For example, the app connecting over bluetooth and then connecting over WiFi for video streaming). This guide will walk you through how to set up multiple transports using the `smartDeviceLink.ini` file.
+The multiple transports feature allows apps connected to Core to start another connection over a different transport for certain services (for example, an app connected over bluetooth using WiFi as a secondary transport for video streaming). This guide will walk you through how to configure the multiple transports feature using the `smartDeviceLink.ini` file.
 
 ## Implementation
 - After Proxy is connected to Core, it initiates another connection over a different transport.
