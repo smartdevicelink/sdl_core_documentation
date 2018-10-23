@@ -45,7 +45,8 @@ Core sends a TransportEventUpdate to the proxy to provide additional information
 
 ### `RegisterSecondaryTransport`
 
-Using the information in the StartService ACK and TransportEventUpdate frames, the proxy sends a RegisterSecondary transport request over the secondary transport.
+Using the information in the StartService ACK and TransportEventUpdate frames, the proxy sends a RegisterSecondary transport request over the secondary transport.  
+
 - If core sends back a RegisterSecondaryTransport ACK, the proxy starts the service over the secondary transport
 
 ## Operation Examples
@@ -60,7 +61,7 @@ Figure 1
 
 |||
 Figure 2
-![StartServiceVideo](./assets/StartService_Video.png)
+![StartServiceVideo](./assets/StartServiceVideo.png)
 |||
 
 ### Start Video/Audio service(No transport available)  
