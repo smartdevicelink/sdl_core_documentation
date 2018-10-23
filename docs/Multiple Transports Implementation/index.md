@@ -3,9 +3,9 @@
 The multiple transports feature allows apps connected to core to start another connection over a different transport for certain services(For example, the app connecting over bluetooth and then connecting over WiFi for video streaming). This guide will walk you through how to set up multiple transports using the `smartDeviceLink.ini` file.
 
 ## Implementation
-* After Proxy is connected to Core, it initiates another connection over a different transport.
-* Core tells Proxy which transport can be used as Secondary Transport.
-* The services that are allowed on the Secondary Transport are specified by Core.
+- After Proxy is connected to Core, it initiates another connection over a different transport.
+- Core tells Proxy which transport can be used as Secondary Transport.
+- The services that are allowed on the Secondary Transport are specified by Core.
 
 !!! Note
 
@@ -25,9 +25,9 @@ Three protocol control frames are used to implement multiple transports
 ```
 
 Core responds to the proxy's `StartService` request with additional parameters audioServiceTransports, videoServiceTransports and secondaryTransports. 
-* The secondaryTransports contains an array of the allowed secondary transports for the current primary transport. 
-* AudioServiceTransports and videoServiceTransports describe which service is allowed to run on which transports (Primary, Secondary or both). The Proxy uses this information and starts services only on an allowed transport.
-* Since RPC and Hybrid services always run on Primary Transport, only Video and Audio services are configurable.
+- The secondaryTransports contains an array of the allowed secondary transports for the current primary transport. 
+- AudioServiceTransports and videoServiceTransports describe which service is allowed to run on which transports (Primary, Secondary or both). The Proxy uses this information and starts services only on an allowed transport.
+- Since RPC and Hybrid services always run on Primary Transport, only Video and Audio services are configurable.
 
 ### `TransportEventUpdate`
 ```
@@ -38,13 +38,13 @@ Core responds to the proxy's `StartService` request with additional parameters a
 ```
 
 Core sends a TransportEventUpdate to the proxy to provide additional information required to connect to the secondary transport
-* In the case of TCP as the secondary transport, the TransportEventUpdate contains the `tcpIpAddress` and `tcpPort` params.
-* If the `tcpIpAddress` field is empty, the secondary transport is unavailable and proxy will not send a RegisterSecondaryTransport request 
+- In the case of TCP as the secondary transport, the TransportEventUpdate contains the `tcpIpAddress` and `tcpPort` params.
+- If the `tcpIpAddress` field is empty, the secondary transport is unavailable and proxy will not send a RegisterSecondaryTransport request 
 
 ### `RegisterSecondaryTransport`
 
 Using the information in the StartService ACK and TransportEventUpdate frames, the proxy sends a RegisterSecondary transport request over the secondary transport.
-* If core sends back a RegisterSecondaryTransport ACK, the proxy starts the service over the secondary transport
+- If core sends back a RegisterSecondaryTransport ACK, the proxy starts the service over the secondary transport
 
 ## Operation Examples
 Start Service(WiFi as secondary transport)  
@@ -78,7 +78,7 @@ TransportEventUpdate(Secondary Transport unavailable)
 
 Add the following lines to `smartDeviceLink.ini`
 
-* To enable multiple transports in core
+- To enable multiple transports in core
 
 ```
 [MultipleTransports]
@@ -86,7 +86,7 @@ Add the following lines to `smartDeviceLink.ini`
 MultipleTransportsEnabled = true
 ```
 
-* To set the allowed Secondary Transport types for a given Primary transport
+- To set the allowed Secondary Transport types for a given Primary transport
 
 ```
 [MultipleTransports]
@@ -95,9 +95,9 @@ SecondaryTransportForBluetooth = WiFi
 ;SecondaryTransportForUSB =
 ;SecondaryTransportForWiFi =
 ```
-!!! Note
 
-List of secondary transport types
+**List of secondary transport types**
+
 | String | Description |
 | ------ | ----------- |
 |IAP_BLUETOOTH |	iAP over Bluetooth|
@@ -109,7 +109,6 @@ List of secondary transport types
 |AOA_USB|	Android Open Accessory|
 |TCP_WIFI|	TCP connection over Wi-Fi|
 
-!!!
 
 ## Audio and Video streaming
 
@@ -121,6 +120,6 @@ Modify the services map in `smartdeviceLink.ini` to restrict video and audio str
 AudioServiceTransports = TCP_WIFI
 VideoServiceTransports = TCP_WIFI, AOA_USB
 ```
-* Transports are listed in preffered order
-* If a transport is not listed, then the service is not allowed to run on that transport
-* If the `AudioServiceTransports`/`VideoServiceTransports` line is omitted, service will be allowed to run on the primary transport
+- Transports are listed in preffered order
+- If a transport is not listed, then the service is not allowed to run on that transport
+- If the `AudioServiceTransports`/`VideoServiceTransports` line is omitted, service will be allowed to run on the primary transport
