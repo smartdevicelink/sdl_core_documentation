@@ -104,18 +104,9 @@ SecondaryTransportForBluetooth = WiFi
 ;SecondaryTransportForWiFi =
 ```
 
-**List of secondary transport types**
-
-| String | Description |
-| ------ | ----------- |
-|IAP_BLUETOOTH |	iAP over Bluetooth|
-|IAP_USB |	iAP over USB, and Core cannot distinguish between Host Mode and Device Mode.|
-|IAP_USB_HOST_MODE |	iAP over USB, and the phone is running as host|
-|IAP_USB_DEVICE_MODE |	iAP over USB, and the phone is running as device|
-|IAP_CARPLAY|	iAP over Carplay wireless|
-|SPP_BLUETOOTH|	Bluetooth SPP. Either legacy SPP or SPP multiplexing.|
-|AOA_USB|	Android Open Accessory|
-|TCP_WIFI|	TCP connection over Wi-Fi|
+!!! NOTE   
+The values which can be used in the `SecondaryTransportFor` configuration are `Wifi`, `Bluetooth` and `USB`  
+!!!
 
 
 ## Audio and Video streaming
@@ -131,3 +122,17 @@ VideoServiceTransports = TCP_WIFI, AOA_USB
 - Transports are listed in preffered order
 - If a transport is not listed, then the service is not allowed to run on that transport
 - If the `AudioServiceTransports`/`VideoServiceTransports` line is omitted, service will be allowed to run on the primary transport
+
+**List of secondary transport types**
+
+| String | Description |
+| ------ | ----------- |
+|IAP_BLUETOOTH |	iAP over Bluetooth|
+|IAP_USB |	iAP over USB, and Core cannot distinguish between Host Mode and Device Mode.|
+|IAP_USB_HOST_MODE |	iAP over USB, and the phone is running as host|
+|IAP_USB_DEVICE_MODE |	iAP over USB, and the phone is running as device|
+|IAP_CARPLAY|	iAP over Carplay wireless|
+|SPP_BLUETOOTH|	Bluetooth SPP. Either legacy SPP or SPP multiplexing.|
+|AOA_USB|	Android Open Accessory|
+|TCP_WIFI|	TCP connection over Wi-Fi|
+
