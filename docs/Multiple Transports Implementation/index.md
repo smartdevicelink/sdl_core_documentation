@@ -13,7 +13,7 @@ RPC and Hybrid services only run on the Primary Transport
 
 !!!
 
-Three protocol control frames are used to implement multiple transports
+There are three protocol control frames which are used in the implementation of multiple transports
 
 ### `StartService ACK`
 ```
@@ -26,8 +26,8 @@ Three protocol control frames are used to implement multiple transports
 
 Core responds to the proxy's `StartService` request with additional parameters audioServiceTransports, videoServiceTransports and secondaryTransports.   
 
-- The secondaryTransports contains an array of the allowed secondary transports for the current primary transport. 
-- AudioServiceTransports and videoServiceTransports describe which service is allowed to run on which transports (Primary, Secondary or both). The Proxy uses this information and starts services only on an allowed transport.
+- The `secondaryTransports` contains an array of the allowed secondary transports for the current primary transport. 
+- `audioServiceTransports` and `videoServiceTransports` describe which services are allowed to run on which transports (Primary, Secondary, or both). The Proxy uses this information and starts services only on allowed transports.
 - Since RPC and Hybrid services always run on Primary Transport, only Video and Audio services are configurable.
 
 ### `TransportEventUpdate`
@@ -38,57 +38,45 @@ Core responds to the proxy's `StartService` request with additional parameters a
 }
 ```
 
-Core sends a TransportEventUpdate to the proxy to provide additional information required to connect to the secondary transport  
+Core sends a TransportEventUpdate to the proxy to provide additional information required to connect over the TCP transport  
 
-- In the case of TCP as the secondary transport, the TransportEventUpdate contains the `tcpIpAddress` and `tcpPort` params.
 - If the `tcpIpAddress` field is empty, the secondary transport is unavailable and proxy will not send a RegisterSecondaryTransport request 
 
 ### `RegisterSecondaryTransport`
 
 Using the information in the StartService ACK and TransportEventUpdate frames, the proxy sends a RegisterSecondary transport request over the secondary transport.  
 
-- If core sends back a RegisterSecondaryTransport ACK, the proxy starts the service over the secondary transport
+- If Core sends back a RegisterSecondaryTransport ACK, the proxy can start services over the secondary transport
 
 ## Operation Examples
-### Start Service(WiFi as secondary transport)  
 
 |||
-Figure 1
+Start Service(WiFi as secondary transport)
 ![StartService](./assets/StartService.png)
 |||
 
-### Start Video/Audio service(Over secondary transport)  
-
 |||
-Figure 2
+Start Video/Audio service(Over secondary transport)
 ![StartServiceVideo](./assets/StartServiceVideo.png)
 |||
-
-### Start Video/Audio service(No transport available)  
-
+  
 |||
-Figure 3
+Start Video/Audio service(No transport available)
 ![StartServiceVideo NAK](./assets/StartServiceNAK_Video.png)
-|||
-
-### Backwards Compatibility(New Proxy/Old Core)  
+|||  
 
 |||
-Figure 4
+Backwards Compatibility(New Proxy/Old Core)
 ![Compatibility NewProxy OldCore](./assets/Compatibility_NP_OC.png)
-|||
-
-### Backwards Compatibility(Old Proxy/New Core)  
+|||  
 
 |||
-Figure 5
+Backwards Compatibility(Old Proxy/New Core)
 ![Compatibility OldProxy NewCore](./assets/Compatibility_OP_NC.png)
-|||
-
-### TransportEventUpdate(Secondary Transport unavailable)  
+|||  
 
 |||
-Figure 6
+TransportEventUpdate(Secondary Transport unavailable)
 ![TransportEventUpdate](./assets/TransportEventUpdate_Disconnected.png)
 |||
 
@@ -98,7 +86,7 @@ Figure 6
 
 Add the following lines to `smartDeviceLink.ini`
 
-- To enable multiple transports in core
+- To enable multiple transports in Core
 
 ```
 [MultipleTransports]
@@ -106,7 +94,7 @@ Add the following lines to `smartDeviceLink.ini`
 MultipleTransportsEnabled = true
 ```
 
-- To set the allowed Secondary Transport types for a given Primary transport
+- To set the available Secondary Transport types for a given Primary transport
 
 ```
 [MultipleTransports]
