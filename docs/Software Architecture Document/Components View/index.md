@@ -2,7 +2,7 @@
 
 The view is represented by module and subsystem diagrams that show the system's export and import relationships. The Components View diagram and its elements description please see below.
 
-*Note*: UML notation for this Components View diagram is extended: both component and it's interfaces are highlighted with the same colour.
+*Note*: UML notation for this Components View diagram is extended: both component and its interfaces are highlighted with the same color.
 
 |||
 ##### Component View diagram
@@ -27,7 +27,7 @@ The view is represented by module and subsystem diagrams that show the system's 
   - *Interfaces*
     -   Does not provide any external interfaces
   - *Behavior*
-    - ***Life Cycle*** creates all available in system components according configuration, binds components to components and starts each component internal routines.
+    - ***Life Cycle*** creates all available in system components according to configuration, binds components to components, and starts each component's internal routines.
   - *Constraints*
     - *N/A*
 
@@ -102,7 +102,7 @@ The view is represented by module and subsystem diagrams that show the system's 
     - *N/A*
 
 #### RPC Service
-  - *Responcibility*
+  - *Responsibility*
     - Send Mobile/HMI RPCs
     - Handle Mobile/HMI RPCs
   - *Relations*
@@ -113,7 +113,7 @@ The view is represented by module and subsystem diagrams that show the system's 
   - *Interfaces*
     - Provides ***RPCService*** interface
   - *Behavior*
-    - The component implements RPC transfering functionality
+    - The component implements RPC transferring functionality
   - *Constraints*
     - *N/A*
 
@@ -188,7 +188,7 @@ The view is represented by module and subsystem diagrams that show the system's 
   - *Interfaces*
     - Provides ***Plugin*** interface
   - *Behavior*
-    - Handle specific RPC and process it's internal logic
+    - Handle specific RPC and process its internal logic
   - *Constraints*
     - Able to implement only RPC layer functionality extension
 
