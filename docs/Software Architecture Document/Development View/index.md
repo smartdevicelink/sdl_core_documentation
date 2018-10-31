@@ -19,77 +19,84 @@ Development view organizes SmartDeviceLink components into logical and abstract 
   - *Responsibility*
     - Providing high-level interface for OS and hardware resource manipulation.
   - *Relations:*
-    - Used by all other layers 
+    - Used by all other layers
   - *Interfaces:*
-    - Provides threads, timers, synchronization, data, time, file and logging interfaces  
+    - Provides threads, timers, synchronization, data, time, file and logging interfaces
   - *Behavior:*
     - Wrapping all OS-system-specific API to C++ Objects.
   - *Constraints:*
-    - N/A 
- 
+    - N/A
+
 #### Transport Layer
   - *Responsibility*
-    - Encapsulates mobile and HMI transports usage 
+    - Encapsulates mobile and HMI transports usage
   - *Relations:*
-    - Protocol layer 
+    - Protocol layer
   - *Interfaces:*
     - TransportManager
-    - HMIMessageHandler 
+    - HMIMessageHandler
   - *Behavior:*
     - Opens connection
     - Performs device discovery
-    - Sends / receives messages 
+    - Sends / receives messages
   - *Constraints:*
     - [Transport Manager Programming guide](../../Transport Manager Programming/index.md)
- 
+
 #### Protocol Layer
   - *Responsibility:*
-    - Encapsulates protocol manipulation. 
+    - Encapsulates protocol manipulation.
   - *Relations:*
     - Application layer
-    - Transport layer 
+    - Transport layer
   - *Interfaces:*
     - ProtocolHandler
-    - ConnectionHandler 
-    - SecurityManager 
+    - ConnectionHandler
+    - SecurityManager
   - *Behavior:*
-    - Parses and handles messages from transport layer according to Protocol 
+    - Parses and handles messages from transport layer according to Protocol
     - Notify upper level about new transport and protocol layer events
-    - Provides Transport Layer manipulation by upper layers 
+    - Provides Transport Layer manipulation by upper layers
   - *Constraints:*
     - [SmartDeviceLink Protocol specification](https://github.com/smartdevicelink/protocol_spec/blob/master/README.md)
- 
+
 #### Application Layer
   - *Responsibility:*
-    - Represents main business logic implementation 
+    - Represents main business logic implementation
   - *Relations:*
-    - Protocol Layer 
+    - Protocol Layer
   - *Interfaces:*
     - ApplicationManager
     - MediaManager
-    - Command
+    - RPC Service
     - RequestController
     - App Launch
     - Resumption
     - Plugin Manager
+    - RC RPC Plugin
+    - SDL RPC Plugin
+    - VehicleInfo Plugin
     - Policy
    - *Behavior:*
-     - Main business logic functionality. 
+     - Main business logic functionality.
   - *Constraints:*
     - [FORD Mobile API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/MOBILE_API.xml)
     - [FORD HMI API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/HMI_API.xml)
 
 ### 4.8.3. Development Environment and Standards
--   Development and testing environment for Ubuntu 14.04 LTS x32/x64
-    -   Debug Environment: Ubuntu 14.04 LTS x32/x64, Qt 5.3
-    -   Compiler: GCC 4.9.3 (OS Ubuntu), Lua 5.2
-    -   Build system: Cmake 2.8.12.2
+-   Minimum development and testing environment for Ubuntu:
+    -   Debug Environment: Ubuntu 16.04 LTS x32/x64, Qt 5.3
+    -   Compiler: GCC 5.3.1 (OS Ubuntu), Lua 5.2
+    -   Build system: Cmake 3.10.2
+-   Recommended development and testing environment for Ubuntu:
+    -   Debug Environment: Ubuntu 18.04 LTS x32/x64, Qt 5.3
+    -   Compiler: GCC 7.3.0 (OS Ubuntu), Lua 5.2
+    -   Build system: Cmake 3.10.2
 -   Development and testing environment for SDL Windows x64:
     -   Build system: Windows 7 x64, CMake
     -   Compiler: Microsoft Visual Studio Express Edition 2013 x64
 -   Development and testing environment for SDL Qt for Windows x32:
     -   Build system: Windows 7 x32, Qt 5.5, CMake, QT Creator
-    -   Compiler: Microsoft Visual Studio Express Edition 2010 x32 
+    -   Compiler: Microsoft Visual Studio Express Edition 2010 x32
 -   Requirements Management system: LuxProject (JIRA, Confluence)
 -   Source Control System: GitHub
 -   Issue Tracking System: LuxProject (JIRA)

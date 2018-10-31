@@ -17,10 +17,14 @@ Development view organizes ATF components into a separate directories:
   - **modules/atf** - **Utility** components
 
 ### 4.8.3. Development Environment and Standards
--   Development and testing environment for Ubuntu 14.04 LTS x32/x64
-    -   Debug Environment: Ubuntu 14.04 LTS x32/x64, Qt 5.3style
-    -   Compiler: GCC 4.9.3 (OS Ubuntu), Lua 5.2
-    -   Build system: qmake (from Qt 5.3), Cmake 2.8.12.2
+-   Minimum development and testing environment
+    -   Debug Environment: Ubuntu 16.04 LTS x32/x64, Qt 5.3style
+    -   Compiler: GCC 5.3.1 (OS Ubuntu), Lua 5.2
+    -   Build system: qmake (from Qt 5.3), Cmake 3.10.2
+-   Recommended development and testing environment
+    -   Debug Environment: Ubuntu 18.04 LTS x32/x64, Qt 5.3style
+    -   Compiler: GCC 7.3.0 (OS Ubuntu), Lua 5.2
+    -   Build system: qmake (from Qt 5.3), Cmake 3.10.2
 -   Development and testing environment for SDL Windows x64:
 -   Requirements Management system: LuxProject (JIRA, Confluence)
 -   Source Control System: GitHub
