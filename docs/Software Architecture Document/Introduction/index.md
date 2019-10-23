@@ -2,7 +2,7 @@
 
 ### 1.1. Purpose and Scope of the SAD
 
-This document defines the high-level software architecture for the SmartDeviceLink (SDL) system. It describes the structure and the main components of the system, the project basis and dependencies. The goal of the document is to describe, in sufficient detail, the software components, their responsibilities, behavior, and interfaces. This document provides support for Luxoft, Ford, open-source developers and others to learn system design, limitations, stakeholders, and ways of extension and further development.
+This document defines the high-level software architecture for the SmartDeviceLink (SDL) system. It describes the structure and the main components of the system, the project basis and dependencies. The goal of the document is to describe, in sufficient detail, the software components, their responsibilities, behavior, and interfaces. This document provides support for SDLC members and other open-source developers to learn system design, limitations, stakeholders, and ways of extension and further development.
 
 ### 1.2. Definitions and Abbreviations
 
@@ -48,8 +48,8 @@ The SW architecture of system is considered from different viewpoints:
 | Logical               | Logical view focuses on the functional needs of the system, emphasizing on the services that the system provides to the users. It is a set of conceptual models. |
 
 For more information about Viewpoints refer to Architectural Blueprints The “4+1” View Model of Software Architecture:
-- [*http://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf*](http://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf).
+- <http://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf>.
 
 For detailed UML diagrams notation description please refer to :
-- [*http://www.uml-diagrams.org/*](http://www.uml-diagrams.org/)
-- [*https://sourcemaking.com/uml*](https://sourcemaking.com/uml)
+- <http://www.uml-diagrams.org/>
+- <https://sourcemaking.com/uml>

@@ -2,7 +2,7 @@
 
 ### 1.1. Purpose and Scope of the SAD
 
-This document defines the high-level software architecture for the ***Automated Test Framework (ATF)*** system. It describes the structure and the main components of the system, the project basis and dependencies. The goal of the document is to describe, in sufficient detail, the software components, their responsibilities, behavior, and interfaces. This document provides support for Luxoft, Ford, open-source developers and others to learn system design, limitations, stakeholders, and ways of extension and further development.
+This document defines the high-level software architecture for the ***Automated Test Framework (ATF)*** system. It describes the structure and the main components of the system, the project basis and dependencies. The goal of the document is to describe, in sufficient detail, the software components, their responsibilities, behavior, and interfaces. This document provides support for SDLC members and other open-source developers to learn system design, limitations, stakeholders, and ways of extension and further development.
 
 ### 1.2. Definitions and Abbreviations
 

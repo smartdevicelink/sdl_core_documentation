@@ -27,7 +27,7 @@ For further information about lua tables type refer to [Lua Tables Tutorial](htt
   - *Usage:*
     - Income and outcome data for *Transport* layer to OS or 3d-party library
  
-#### Ford protocol packet
+#### SDL protocol packet
   - *Summary:*
     - Protocol layer primitive with protocol related information
   - *Usage:*

@@ -132,9 +132,9 @@ The view is represented by module and subsystem diagrams that show the system's 
     - Mobile Requests are spitted between responsible HMI interfaces and sent as separate HMI Requests or Notifications.
     - HMI Responses and notifications are verified according to business requirements and provided to Mobile.
   - *Constraints*
-    - [FORD Mobile API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/MOBILE_API.xml)
-    - [FORD HMI API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/HMI_API.xml)
-    - Commands happy paths are depends on correct [HMI Behavior](https://github.com/smartdevicelink/sdl_hmi_integration_guidelines/blob/master/docs/Getting%20Started/index.md) implementation.
+    - [Mobile API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/MOBILE_API.xml)
+    - [HMI API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/HMI_API.xml)
+    - Commands happy paths are depends on correct [HMI Behavior](https://smartdevicelink.com/en/guides/hmi/getting-started/) implementation.
 
 #### Request Controller
   - *Responsibility*
@@ -370,4 +370,4 @@ The view is represented by module and subsystem diagrams that show the system's 
     - Adopts transport searching, connecting, data transferring API for one ***TransportAdapters interface.***
   - *Constraints*
     - For Bluetooth BlueZ transport there are only 30 connections available due to RFCOMM channels limitations.
-    - [Transport Manager Programming guide](../../Transport Manager Programming/index.md)
+    - [Transport Manager Programming guide](https://smartdevicelink.com/en/guides/core/transport-manager-programming/)
