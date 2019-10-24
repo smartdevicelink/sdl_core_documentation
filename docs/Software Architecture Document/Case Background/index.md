@@ -19,23 +19,11 @@ The SDL system allows Application to:
 -   Use vehicle HMI: VR, TTS, buttons (physical and touch-screen), vehicle display, audio system. etc.
 -   Retrieve Vehicle Data (seat belt position, transmission shift lever position, airbag status, etc.).
 
-### 2.2. Product Stakeholders
+### 2.2. Business Goals
 
-Actors are stakeholders that interact with product directly.
+The purpose of the project is to develop component of SmartDeviceLink Core by adding new features required by the SDL Consortium.
 
-| Stakeholder Name         | Actor (Yes/No) | Concern  |
-|--------------------------|----------------|----------|
-| Ford Company             | No             | Get the SDL system with enough quality and functionality that fulfill their goals |
-| PM / Architect / Analyst | No             | Use Customer Requirements Specification |
-| Developers               | Yes            | Construct and deploy the system from specifications |
-| Testers                  | No             | Test the system to ensure that it is suitable for use |
-
-### 2.3. Business Goals
-
-Luxoft delivered to Ford a prototype of POSIX compliant Applink Core in March, 2013.
-To support FORD goal of successful acceptance of Applink (new name is SmartDeviceLink) Core by open source community of GENIVI consortium further enhancements will be required. The purpose of the project is to develop component of SmartDeviceLink 4.x Core by adding new features required by Ford.
-
-### 2.4. Significant Driving Requirements
+### 2.3. Significant Driving Requirements
 
 The requirements are listed in the table below and ordered by descending of their significance from architectural solution point of view.
 

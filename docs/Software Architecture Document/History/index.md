@@ -27,7 +27,7 @@
 | 2.15        | 06/29/2016 | Draft           | [Elisey Zamakhov]      | Add Windows platform from SOW <br> Figure Resumption updated <br> Add Config profile constraints <br> Add OS layers for View-to-view tables <br> Update viewpoint description <br> Rephrase Significant Driving Requirement 8 <br> Process State View update with Stop transition <br> Add Component View highlighting notes <br> Add links to Viewpoints and UML notation <br> Updated reference numbering <br> Spelling fixes |
 | 2.16        | 06/30/2016 | Reviewed        | [Elisey Zamakhov]      | Minor review changes |
 | 3.0         | 06/30/2016 | Approved        | [Nataly Snitsar]       | Approve by management |
-| 3.1         | 08/01/2016 | Draft           | [Elisey Zamakhov]      | Porting to [Ford developers portal] <br> Update Requirements Coverage chapter <br> Add GitHubOpen Questions and Known Issues <br> Update Components View description with Constraints <br> Update Layers Constraints <br> Removed assumptions from 2.4. Significant Driving <br> Update Requirements |
+| 3.1         | 08/01/2016 | Draft           | [Elisey Zamakhov]      | Porting to [SDL developer portal] <br> Update Requirements Coverage chapter <br> Add GitHubOpen Questions and Known Issues <br> Update Components View description with Constraints <br> Update Layers Constraints <br> Removed assumptions from 2.4. Significant Driving <br> Update Requirements |
 | 3.2         | 08/10/2016 | Draft           | [Sergey Levchenko]     | Add AppLaunch Component |
 | 3.3         | 08/11/2016 | Draft           | [Elisey Zamakhov]      | Use cases moved to a separate chapter <br> Add applications data storing in Process State View |
 | 3.4         | 08/16/2016 | Draft           | [Elisey Zamakhov]      | Update Diagnostics chapter with log4cxx features usage |
@@ -54,5 +54,5 @@
 [Nataly Snitsar]: mailto:NSnitsar@luxoft.com
 [Sergey Levchenko ]: https://github.com/LevchenkoS
 
-[Ford developers portal]: https://smartdevicelink.com/en/guides/core/software-architecture-document/introduction/
+[SDL developer portal]: https://smartdevicelink.com/en/guides/core/software-architecture-document/introduction/
 

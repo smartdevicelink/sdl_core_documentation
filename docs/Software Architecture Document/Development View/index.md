@@ -2,9 +2,9 @@
 
 ### 4.8.1. Implementation Technologies
 
-- C++98 language is selected as a programming language for SmartDeviceLink as a OS and CPU architecture independent.
+- C++11 is used as the primary programming language for SDL Core.
 - [*CMake*](https://cmake.org/documentation/) tool-chain selected as a cross-platform building tools.
-- [Google Test](https://github.com/google/googletest/blob/master/googletest/docs/Documentation.md) with [Google Mock](https://github.com/google/googletest/blob/master/googlemock/docs/Documentation.md) extension is chosen as an opensource C++ test framework.
+- [Google Test](https://github.com/google/googletest/blob/master/googletest/docs/primer.md) with [Google Mock](https://github.com/google/googletest/blob/master/googlemock/docs/for_dummies.md) extension is chosen as an opensource C++ test framework.
 
 ### 4.8.2. Modules and Code Base Organization
 
@@ -40,7 +40,7 @@ Development view organizes SmartDeviceLink components into logical and abstract 
     - Performs device discovery
     - Sends / receives messages
   - *Constraints:*
-    - [Transport Manager Programming guide](../../Transport Manager Programming/index.md)
+    - [Transport Manager Programming guide](https://smartdevicelink.com/en/guides/core/transport-manager-programming/)
 
 #### Protocol Layer
   - *Responsibility:*
@@ -79,16 +79,16 @@ Development view organizes SmartDeviceLink components into logical and abstract 
    - *Behavior:*
      - Main business logic functionality.
   - *Constraints:*
-    - [FORD Mobile API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/MOBILE_API.xml)
-    - [FORD HMI API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/HMI_API.xml)
+    - [Mobile API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/MOBILE_API.xml)
+    - [HMI API Spec](https://github.com/smartdevicelink/sdl_core/blob/master/src/components/interfaces/HMI_API.xml)
 
 ### 4.8.3. Development Environment and Standards
 -   Minimum development and testing environment for Ubuntu:
-    -   Debug Environment: Ubuntu 16.04 LTS x32/x64, Qt 5.3
+    -   Debug Environment: Ubuntu 16.04 LTS x32/x64
     -   Compiler: GCC 5.3.1 (OS Ubuntu), Lua 5.2
     -   Build system: Cmake 3.10.2
 -   Recommended development and testing environment for Ubuntu:
-    -   Debug Environment: Ubuntu 18.04 LTS x32/x64, Qt 5.3
+    -   Debug Environment: Ubuntu 18.04 LTS x32/x64
     -   Compiler: GCC 7.3.0 (OS Ubuntu), Lua 5.2
     -   Build system: Cmake 3.10.2
 -   Development and testing environment for SDL Windows x64:
@@ -97,8 +97,8 @@ Development view organizes SmartDeviceLink components into logical and abstract 
 -   Development and testing environment for SDL Qt for Windows x32:
     -   Build system: Windows 7 x32, Qt 5.5, CMake, QT Creator
     -   Compiler: Microsoft Visual Studio Express Edition 2010 x32
--   Requirements Management system: LuxProject (JIRA, Confluence)
+-   Requirements Management system: GitHub
 -   Source Control System: GitHub
--   Issue Tracking System: LuxProject (JIRA)
--   Document Management System: LuxProject (JIRA, Confluence, SVN)
+-   Issue Tracking System: GitHub
+-   Document Management System: GitHub
 -   Coding style: [*SDL C++ Style*](https://github.com/smartdevicelink/sdl_core/wiki/SDL-Coding-Style-Guide)
