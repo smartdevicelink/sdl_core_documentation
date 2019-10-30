@@ -51,6 +51,8 @@
 
 - [[SDL 0212] Add Ability to Reuse a SyncFileName for a PutFile](https://github.com/smartdevicelink/sdl_core/issues/2799)
 
+- [[SDL 0246] Add App Services to HMICapabilities](https://github.com/smartdevicelink/sdl_core/issues/2998)
+
 ## Completed Bug Fixes/Enhancements
 
 - [Fix/Set mandatory=false for optional response params](https://github.com/smartdevicelink/sdl_core/pull/3052)
@@ -68,3 +70,29 @@
 - [Audio Stream cutoff when using pipe streaming](https://github.com/smartdevicelink/sdl_core/issues/2633)
 
 - [Audio stream internal data stream error when using socket streaming](https://github.com/smartdevicelink/sdl_core/issues/2945)
+
+- [Wrong processing of SetDisplayLayout response data](https://github.com/smartdevicelink/sdl_core/issues/1392)
+
+- [Core crash during ignition_off by ATF script execution](https://github.com/smartdevicelink/sdl_core/issues/2859)
+
+- [SDL does not send GENERIC_ERROR in case HMI does NOT respond during <DefaultTimeout>+<RPCs_internal_timeout>](https://github.com/smartdevicelink/sdl_core/issues/1880)
+
+- [Pipe Streaming Thread Blocks Indefinitely](https://github.com/smartdevicelink/sdl_core/issues/3072)
+
+- [SDL is unable to start protected Audio/Video service in multi-transport configuration](https://github.com/smartdevicelink/sdl_core/issues/3059)
+
+- [SDL sends UPDATE_NEEDED even if app is not registered yet](https://github.com/smartdevicelink/sdl_core/issues/2995)
+
+- [Rare SDL Core crash upon termination](https://github.com/smartdevicelink/sdl_core/issues/2787)
+
+- [SDL respond with not supported resultCode = UNSUPPORTED_RESOURCE for ChangeRegistration](https://github.com/smartdevicelink/sdl_core/issues/1694)
+
+- [Remove unused ShowCustomForm HMI RPC](https://github.com/smartdevicelink/sdl_core/issues/2717)
+
+- [ExpectPolicyTableReset unit test is unstable](https://github.com/smartdevicelink/sdl_core/issues/3098)
+
+- [Fix log severity level and various typos](https://github.com/smartdevicelink/sdl_core/issues/2694)
+
+- [Provide operation result to function file_system::CreateDirectory](https://github.com/smartdevicelink/sdl_core/issues/2695)
+
+- [Application does not retrieve subscriptions to app service after resumption ](https://github.com/smartdevicelink/sdl_core/issues/3096)
