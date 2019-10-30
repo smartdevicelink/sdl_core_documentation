@@ -1,8 +1,8 @@
 # SDL Core 5.0.0 Release Notes
 
 ## Supported Specifications
-- [SDL Mobile RPC Spec: Version 5.0.0](https://github.com/smartdevicelink/rpc_spec/releases/tag/5.0.0)
-- [SDL Protocol Spec: Version 5.1.0](https://github.com/smartdevicelink/protocol_spec/releases/tag/5.1.0)
+- SDL Mobile RPC Spec: [Version 5.0.0](https://github.com/smartdevicelink/rpc_spec/releases/tag/5.0.0)
+- SDL Protocol Spec: [Version 5.1.0](https://github.com/smartdevicelink/protocol_spec/releases/tag/5.1.0)
 
 ## Implemented Proposals / New Features
 
